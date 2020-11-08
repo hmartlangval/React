@@ -1,0 +1,15 @@
+# NOTES
+
+1. css-loader for resolving the css files for commands issued via Import/require (basically css-loader simply reads css and outputs a string, so advanced users can replace this for other loaders it will still work)
+2. style-loader for rendering the <style> tags into the html output
+3. install webpack-dev-server for dynamically hosting the "development server" for advanced features
+4. install react-hot-loader for the HOT Module Replacement (HMR) feature, that will update the output automatically w/o manual refresh
+5. webpack configurations:
+	* add "webpack-dev-server/client/?http://localhost:8080" in ENTRY
+	* add "publicPath" in OUTPUT -> the value can be anything, no physical output is done anywhere
+	* add "rules" in "module" section for css and style loaders
+	* older version we use loader:"loader-one!loader-two" <-- this exclamation separation is replaced with the key "use":['', ''] in newer version
+	* add plugins:[new webpack.HotModuleReplacementPlugin()] for the hot swapping
+	* add devServer configuration: "devServer:{hot:true}"
+ 	* you will not see output, to see physical output in the "build" folder, change to "devServer":{hot:true, writeToDisk: true}
+6. "devtoool: 'source-map'" <-- this will allow more refined debugging from browser console and will write correct source code line numbers on warnings and errors.
