@@ -1,0 +1,7 @@
+#Note
+
+1. Webpack configuration "mode" property can be removed, if not found, webpack will treat the build as production
+2. If "mode:development" is found, the react library will reference the react.x.x.development.js file and you get development related warnings from console
+3. Webpack will pack the react files along with the output script.js file and hence you do not need to import external <script> files from CDN or other sources
+4. Usage of "import React from 'react'" becomes meaningful with webpack
+5. Usage of "import" will throw error when babel-cli build as the files are externally linked
