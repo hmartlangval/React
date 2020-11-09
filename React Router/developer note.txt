@@ -1,0 +1,15 @@
+1. install React-Router <-- older version
+2. better install React-Router-Dom version @4<-- 5 is not exactly same with 4
+3. Two types of Router -> HashRouter and BrowserRouter
+	HashRouter uses the # in the url as new routes
+	BrowserRoute uses the Browser's routing and
+4. Good properties:
+	Link -> same as <a> in HTML but <Link> will not do a page reload, so good. specially for SPAs
+	Route -> components defined in Route are the ones that gets displayed when a url match is found
+	Switch -> When multiple routes defined has multiple URL matches, using <Switch> ensures that only the first one is rendered
+	useLocation() -> good for getting one property "location" in case we wanted to redirect back to this location
+	useParams() -> good to get the URL parameters
+	useRouteMatch() -> very good to obtain importantly 2 propertyes "url" and "path" of current Route
+	Login is almost same as HOC, but it could be implemented better
+	...rest -> this is a declaration meaning that ...rest will store an N number of params passed to it as an Array
+	
