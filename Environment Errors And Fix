@@ -1,0 +1,6 @@
+
+If you get MSBuild related error while installing NPM packages like
+MSB4132: The tools version "2.0" is unrecognized... that is because of the MS Build version installed, maybe conflict of not present
+
+Depending on the version installed in your system, explictly mention in the npm install command the msvs_version =2012, =2013, =2015 and so on
+npm install --save-dev gulp-sass --msvs_version=2017
